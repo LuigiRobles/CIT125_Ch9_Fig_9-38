@@ -6,20 +6,23 @@
 #include <iostream>
 using namespace std;
 
-int multiplication(int a, int b); //function prototype
+double getGrossPay(int a, int b); //function prototype
+
 int main()
 {
 	int hoursWorked = 0;
 	int payRate = 0;
 	int grosspay = 0;
 
-	cout << "Please enter the hours employee worked: " << endl;
+	cout << "Please enter the number of hours employee worked or a negative number to quit: " << endl;
 	cin >> hoursWorked;
-	cout << "Please enter the employee's pay rate: " << endl;
-	cin >> payRate;
 
-	grosspay = multiplication(payRate * hoursWorked);
-	cout << "This employee's gross pay is: " << grosspay << endl;
+	while (hoursWorked > 0)
+		cout << "Please enter the employee's pay rate: " << endl;
+		cin >> payRate;
+
+		grosspay = getGrossPay(payRate * hoursWorked);
+		cout << "This employee's gross pay is: " << grosspay << endl;
 }
 
 
